@@ -30,7 +30,7 @@
 
 \usepackage{makecell} % Required for makeing cell in table
 
-\usepackage[vietnamese]{babel} % English language/hyphenation
+\usepackage[vietnamese]{babel} %Vietnameses language/hyphenation
 
 \usepackage{enumitem} % Customize lists
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
@@ -48,7 +48,6 @@
 \newcommand{\chudau}[1]{%
     \lettrine[lines=3]{\initfamily\textcolor{darkgreen}{#1}}
 }
-
 
 %----------------------------------------------------------------------------------------
 %	FONTS
@@ -158,7 +157,7 @@
 %	PAGE HEADERS
 %----------------------------------------------------------------------------------------
 
-%\usepackage{fancyhdr} % Required for header and footer configuration
+\usepackage{fancyhdr} % Required for header and footer configuration
 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}} % Chapter text font settings
@@ -245,8 +244,8 @@
 \newcounter{dummy} 
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
-\newtheorem{theoremeT-nono}[dummy]{}
-\newtheorem{problem}{Problem}[chapter]
+\newtheorem{theoremeT}[dummy]{Định lý}
+\newtheorem{problem}{Vấn đề}[chapter]
 \newtheorem{exerciseT}{Bài tập}[chapter]
 \theoremstyle{blacknumex}
 \newtheorem{exampleT}{Ví dụ}[chapter]
@@ -308,18 +307,6 @@ rightmargin=0cm,
 linewidth=4pt,
 innerbottommargin=0pt]{dBox}	
 
-%my definition box
-\newmdenv[skipabove=7pt,
-skipbelow=7pt,
-backgroundcolor=blue!2,
-linecolor=ocre,
-innerleftmargin=5pt,
-innerrightmargin=5pt,
-innertopmargin=5pt,
-leftmargin=0cm,
-rightmargin=0cm,
-innerbottommargin=5pt]{ttBox}
-
 % Corollary box
 \newmdenv[skipabove=7pt,
 skipbelow=7pt,
@@ -336,6 +323,18 @@ leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt,
 innerbottommargin=5pt]{cBox}
+
+%my definition box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+backgroundcolor=blue!2,
+linecolor=ocre,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+innerbottommargin=5pt]{ttBox}
 
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
@@ -511,4 +510,3 @@ addtohook={%
 \fi
 }
 }
-
