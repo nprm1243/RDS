@@ -7,4 +7,4 @@ Với mong muốn tạo ra một nơi để mọi người cùng nhau đóng gó
 
 RDS là một dự án mã nguồn mở, mọi người có thể truy cập để tìm đọc tài liệu, đóng góp cũng như góp ý cho dự án. Hiện nay, các tài liệu về Data Science còn khá ít, đặc biệt tài liệu bằng Tiếng Việt lại càng khan hiếm, để tìm được những tài liệu chất lượng, hữu ích cần tốn khá nhiều thời gian, công sức, thậm chí không thể tìm ra đúng vấn đề mình cần giải đáp. Tại RDS, chúng mình sẽ soạn thảo LaTex với ngôn ngữ Tiếng Việt là chính, dựa trên các nguồn tài liệu, bài giảng được tiếp cận và kinh nghiệm cá nhân, hy vọng có thể giúp ích được cho mọi người trong quá trình học tập, nghiên cứu và ôn tập. Các đề tài của dự án bao gồm từ đại cương đến chuyên ngành, cơ bản đến nâng cao và cả những “câu chuyện” về Data Science.
 
-![alt text](https://www.canva.com/design/DAEtI5SBxtM/z48CSX4tgKifkHxlOl6uaw/view?utm_content=DAEtI5SBxtM&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+![alt text](https://cdn.discordapp.com/attachments/893738488137142286/899508584788951070/ROAD_to_DATA_SCIENCE.png)
