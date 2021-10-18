@@ -1,2 +1,2 @@
-# RTD
+# RDS
 Road to Datascience
