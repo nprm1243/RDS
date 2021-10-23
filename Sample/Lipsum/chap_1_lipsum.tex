@@ -1,0 +1,17 @@
+\documentclass{standalone} % Default font size and left-justified equations
+\usepackage{standalone}
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\usepackage{lipsum}
+
+\begin{document}
+	\section{Sample}
+	\lipsum[1]
+	\begin{center}
+		% include graphic fit page
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/cutecat.png}
+	\end{center}
+\end{document}
