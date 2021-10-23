@@ -1,0 +1,28 @@
+\documentclass{standalone} % Default font size and left-justified equations
+\usepackage{standalone}
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\usepackage{lipsum}
+
+\begin{document}
+	%----------------------------------------------------------------------------------------
+	%	TITLE PAGE
+	%----------------------------------------------------------------------------------------
+	
+	\begingroup
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture,overlay]
+		\coordinate [below=12cm] (midpoint) at (current page.north);
+		\node at (current page.north west)
+		{\begin{tikzpicture}[remember picture,overlay]
+				\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
+				\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering ROAD TO DATA SCIENCE\\[15pt] % Book title
+						{\Large -Early Version-}\\[20pt] % Subtitle
+						{\huge FROM HCMUS with LOVE}}}; % Author name
+		\end{tikzpicture}};
+	\end{tikzpicture}
+	\endgroup
+\end{document}
