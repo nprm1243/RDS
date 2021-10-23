@@ -1,0 +1,85 @@
+\documentclass{standalone} % Default font size and left-justified equations
+\usepackage{standalone}
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\epigraphfontsize{\small\itshape}
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+
+\begin{document}
+    \section{R là gì ?}
+        \subsection{Từ ngôn ngữ S đến ngôn ngữ R}
+        
+        S là một ngôn ngữ lập trình cho thống kê được phát triển bởi John Chambers và những người khác tại Bell Laboratories, ban đầu là một phần của AT \& T Corp. Mục tiêu của S như John Chambers mong muốn là "từ ý tưởng có thể viết phần mềm một cách nhanh chóng, đơn giản và hiệu quả". S được khởi xướng vào năm 1976 như một môi trường thống kê nội bộ dựa trên các thư viện Fortran, những phiên bản S đầu tiên thậm chí còn không có các hàm để lập các mô hình thống kê.
+        
+        Vào năm 1988, hệ thống được viết lại bằng C và bắt đầu tương đồng vớ ngôn ngữ S mà chúng ta biết ngày nay (phiên bản thứ 3 của ngôn ngữ này). Bản thứ 4\footnote{Theo Chambers, John (Jan 1, 2001), \hyperref[Archive.org]{https://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html}} được phát hành năm 1998 và là phiên bản chúng ta đang sử dụng ngày nay được trình bày trong cuốn "Programming with Data" của John Chambers (The green book).
+        
+        Vào đầu những năm 90, con đường phát triển ngôn ngữ S đã trở nên quanh co và vào năm 1993, Bell Labs đã cấp cho StatSci(sau này là Insightful Corp) giấy phép độc quyền để phát triển và thương mại. Năm 2004, Insightful đã mua lại S với giá 2 triệu đô la và sau đó vài năm đã phát triển và bán ngôn ngữ S với tên S-PLUS với các tính năng mới (chủ yếu là giao diện người dùng) trên đó. Năm 2008, Insightful được TIBCO mua lại với giá 25 triệu đô la và cho đến ngày nay, TIBCO là chủ sở hữu và phát hành độc quyền ngôn ngữ S.
+        
+        Các nguyên tắc cơ bản trong ngôn ngữ S đã không thay đổi đáng kể từ khi John Chambers xuất bản "The green book" vào năm 1998, và cũng trong năm đó S đã giành được "Association for Computing Machinery’s Software System Award" là một giải thưởng danh giá trong lĩnh vực khoa học máy tính.
+        
+        Hiểu triết lý chung của S với cả người đang tìm hiểu S và R vì nó cũng chính là tiền đề tạo nên hai ngôn ngữ này. S nhìn thoáng qua có thể là viết tắt của từ \textbf{s}tatistics nghĩa là thống kê và đó cũng chính là nguồn gốc của ngôn ngữ S. S không xuất phát từ bất cứ nền tảng ngôn ngữ lập trình nào như truyền thống, điều đó khiến cho những người làm trong lĩnh vực lập trình cảm thấy rất kỳ lạ và khó hiểu. Các nhà phát minh đã tập trung làm cho việc phân tích dữ liệu với S trở nên dễ dàng nhất có thể và S có thể được sử dụng bởi tất cả mọi người, không yêu cầu kỹ năng lập trình hay tư duy lập trình cao.
+        
+        Trong "Stages in the Evolution of S", John Chambers có viết:\\
+        ``\textit{Chúng tôi muốn người dùng có thể bắt đầu trong một (môi trường tương tác), nơi họ không ý thức rằng bản thân đang lập trình. Cho đến khi nhu cầu của họ trở nên rõ ràng và có một mức độ thông hiểu nhất định, họ có thể dần chuyển sang việc lập trình, khi đó khía cạnh ngôn ngữ và hệ thống sẽ trở nên quan trọng hơn.}''\footnote{Văn bản gốc: "We wanted users to be able to begin in an interactive environment, where they did not consciously think of themselves as programming. Then as their needs became clearer and their sophistication increased, they should be able to slide gradually into programming, when the language and system aspects would become more important."}
+        
+        Phần quan trọng ở đây chính là quá trình chuyển đổi sang việc lập trình. Điều đó muốn nói lên rằng S là một ngôn ngữ phù hợp với tất cả mọi người, từ người không có nhu cầu lập trình đến những người có kỹ năng lập trình tốt. Nói theo mặt kỹ thuật, họ cần tạo ra một ngôn ngữ phù hợp để phân tích dữ liệu tương tác (dựa trên dòng lệnh nhiều hơn\footnote{Ví dụ như muốn vẽ đồ thị ta chỉ cần dùng một lệnh drawplot xong thêm các tham số và dữ liệu vào hệ thống sẽ đưa về đồ thị như ta muốn, chứ không cần phải qua nhiều bước trung gian như kẻ khung, đánh số..}) cũng như để viết các chương trình dài hơn (giống như các ngôn ngữ lập trình truyền thống khác).
+        
+        Ngày nay, khi bạn nhìn thấy một công cụ cực kỳ mạnh mẽ hỗ trợ cho thống kê, dự báo, trực quan hóa dữ liệu được các nhà khoa học dữ liệu hay các lãnh đạo quản lý dự án sử dụng rất phổ biến, khả năng cao đó chính là R hoặc là một cái gì đó được xây dựng từ R. Một đặc điểm thú vị của R chính là cú pháp của nó tương tự S-PLUS, mà S hay S-PLUS như đã nói ở trên là một công cụ mạnh mẽ, hiệu quả nhưng lại dễ sử dụng cho tất cả mọi người (tuy cả hai gần như cùng cú pháp nhưng sẽ có một số khác biệt về cách sử dụng)\footnote{Thực tế thì ngôn ngữ R về cách hoạt động giống với ngôn ngữ Scheme hơn nhiều so với S.}. R là ngôn ngữ lập trình thống kê có mã nguồn mở và miễn phí, do đó nó được sử dụng một cách rộng rãi từ các biểu đồ thống kê truyền thông, đến biểu đồ kinh tế, dự báo thời tiết, các dự án thống kê học máy... đã giúp điều hành hệ thống kinh tế và xã hội của toàn thế giới. 
+        
+        R được ra mắt lần đầu vào đầu những năm 90 bởi Robert Gentleman và Ross Ihaka, cả hai đều là những thành viên của đại học Auckland. Những kinh nghiệm của Robert Gentleman và Ross Ihak được đăng trên "Tạp chí Thống kê Tính toán và Đồ thị"\footnote{Ross Ihaka and Robert Gentleman. R: A language for data analysis and graphics. Journal of Computational and Graphical Statistics, 5(3):299–314, 1996}.
+        
+        Năm 1995, Martin M\"{a}chler đã có một đóng góp lớn khi thuyết phục Ross và Robert sử dụng "GNU General Public License" để tạo ra phần mềm R miễn phí. Điều này rất quan trọn vì nhờ đó mà R là ngôn ngữ mã nguồn mở tạo ra tiền đề cho nhiều phần mềm, công cụ được xây dựng dựa trên R một cách hoàn toàn miễn phí.
+        
+        Năm 1997, R Core Group được giới thiệu với một số thành viên có liên kết với S và S-PLUS. Hiện tại nhóm này là nhóm cốt lõi quản lý mã nguồn của R và chỉ có thể kiếm tra các thay đổi đối với source code chính của R, phần còn lại có thể được đóng góp bởi mọi trên khắp thế giới dưới dạng thêm tính năng mới hoặc sửa lỗi. Vào năm 2000, R 1.0.0 đã được phát hành thành công ra thế giới.
+        
+        Ngày nay, R chạy được trên hầu hết mọi nền tảng máy tính và hệ điều hành. Do nó là ngôn ngữ mã nguồn mở nên ai cũng có thể chỉnh sửa, tối ưu lại cho phù hợp hơn với từng nền tảng mà họ chọn. Một tính năng khá thú vị của R so với các dự án mã nguồn mở chính là được cập nhật bản phát hành thường xuyên, thường là vào tháng 10, các tính năng mới, bản sửa lỗi sẽ được công bố cho mọi người. Trong suốt năm, những bản cập nhật nhỏ vẫn được diễn ra thường xuyên cho thấy sự tích cực, chu đáo của nhà phát triển và phát hành sản phẩm.
+        
+        R hiện nay vẫn duy trì tốt triết lý ban đầu của ngôn ngữ S là cung cấp một môi trường làm việc tương tác nhưng vẫn đủ mạnh mẽ để phù hợp với mọi người, mọi nhu cầu liên quan đến thống kê, lập mô hình... Theo nhiều cách, một ngôn ngữ có thể thành công bằng cách tạo ra một nền tảng và tất cả mọi người đều có thể đóng góp cho nền tảng đó. Danh sách gửi thư R-help và R-devel đã hoạt động liên tục trong hơn một thập kỷ nay nhằm đáp ứng những nhu cầu cần thiết của mọi người.
+        
+        \subsection{Cách cài đặt R \& R studio}
+        
+        Hệ thống R bản chính và một số thư viện mở rộng có thể được tải về từ "Comprehensive R Archive Network" hay còn được viết tắt là CRAN. Bạn có thể truy cập vào CRAN theo đường link: \href{cran.r-project.org}{cran.r-project.org}\footnote{Toàn bộ hướng dẫn phía dưới được thực hiện vào tháng 10/2021, về sau đường dẫn có thể bị thay đổi hoặc cấu trúc trang web có thể bị thay đổi.}
+        
+        \begin{center}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/CRAN_download_web_page.png}
+        \end{center}
+        
+        R studio là một môi trường tích hợp được phát triển cho R. Nó bao gồm nhiều chức năng và công cụ hỗ trợ soạn thảo lệnh, vẽ biểu đồ, lập mô hình thống kê với R.R studio có sẵn bản thương mại và bản mã nguồn mở có thể chạy trên nhiều môi trường khác nhau. R studio có thể tải về tại: \href{rstudio.com}{https://www.rstudio.com/products/rstudio/download/}
+        
+        \begin{center}
+            \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{Pictures/R_studio_1.png}
+        \end{center}
+        
+        \subsubsection{Cài đặt trên Windows}
+        
+        Để cài đặt R cho máy chạy hệ điều hành Windows, ta vào CRAN rồi chọn "Download R for Windows"
+        
+        \begin{center}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Download_for _win_1.png}
+        \end{center}
+        
+        Chúng ta sẽ có 4 lựa chọn khác nhau:
+        \begin{itemize}
+            \item[-] \textbf{base}: Đây là bản cơ sở của R, nên chọn lựa chọn này nếu đây là lần đầu tiên bạn cài R.
+            \item[-] \textbf{contrib}: Đây là nơi bạn có thể tải các gói R mở rộng (phải cài bản base trước) hỗ trợ R từ bản 2.13 trở lên.
+            \item[-] \textbf{old-contrib}: Đây là nơi bạn có thể tải các gói R mở rộng cũ hơn hỗ trợ R dưới bản 2.13.
+            \item[-] \textbf{Rtools}: Đây là công cụ để bạn có thể xây dựng các gói mở rộng cho R, hoặc xây dựng R theo ý thích của bản thân.
+        \end{itemize}
+        
+        Trong phần hướng dẫn cài đặt mình sẽ sử dụng lựa chọn "base". Khi lựa chọn base bạn sẽ nhìn thấy trang web có phần để tải R về như sau:
+        
+        \begin{center}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Pictures/Download_for _win_2.png}
+        \end{center}
+        
+        Khi bạn click chuột vào chỗ "Download R x.x.x for Windows"\footnote{Ở thời điểm bài này được viết là phiên bản 4.1.1.}, R sẽ được tải xuống máy bạn một cách tự động. Các bước cài đặt như cài đặc các phần mềm bình thường khác trên windows.
+        
+        
+        
+        
+        
+\end{document}

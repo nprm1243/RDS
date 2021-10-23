@@ -1,8 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% This is use for project RDS
+% RDS is a open source project about all subjects and problems in Data science
+% Project source link: https://github.com/nprm1243/RDS
+%
+% Everyone can use this project in another poject, please don't use to get money.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
 \documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
 \usepackage{standalone}
+
+%----------------------------------------------------------------------------------------
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
 
 \begin{document}
-	hihihaha
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\input{book_cover}
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright teamplate \copyright\ 2013 John Smith\\ % Copyright notice
+\noindent Copyright topic \copyright\ 2021 Nghi Gia, Minh Tien \\ % Copyright notice
+\noindent \textsc{Published by Publisher}\\ % Publisher
+
+\noindent \textsc{https://github.com/nprm1243/RDS}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License template information
+
+\noindent This project is free to use and open source, so that people can use the information written in the book for other projects BUT NOT FOR SALE!!.
+
+\noindent \textit{22/10/2021} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{R cơ bản}
+    
+    \chapterimage{chapter_head_1.pdf}
+    
+    \chapter{Tổng quan và cài đặt R/ R studio}
+        \hrule
+        \vspace*{2cm}
+        \normalsize
+        \chudau{R} là gì? Một ngôn ngữ miễn phí và đơn giản như R có thể làm được gì? Chương này ta sẽ tìm hiểu về lịch sử phát triển của R, cách cài đặt R/ R studio và cùng nhau nghiên cứu cách R hoạt động.
+        \pagebreak
+        
+        \input{R_for_datascience/chapter_1}
+    
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Trích dẫn}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+\section*{Books}
+\addcontentsline{toc}{section}{Books}
+\printbibliography[heading=bibempty,type=book]
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
 \end{document}
